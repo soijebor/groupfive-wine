@@ -56,7 +56,7 @@ def load_data(wine_type):
 # Create a function home() with a return statement
 def home():
     if request.method =='GET':
-        return render_template('index6.html')
+        return render_template('index.html')
 
 # Create the route for the prediction analysis
 @app.route('/predict',methods=['GET', 'POST'])
@@ -129,6 +129,6 @@ def wine_select():
 
     wine_columns = [col for col in list(wine_df.columns) if "vineyard" in col]
 
-    return render_template("index6.html", wine_columns)
+    return render_template("index.html", wine_columns)
 if __name__ == "__main__":
     app.run(debug=True)
